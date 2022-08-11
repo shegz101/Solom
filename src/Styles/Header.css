@@ -29,6 +29,7 @@
 
 .connect__wallet {
     margin-top: 10px;
+    margin-right: 20px;
     height: 45px;
     width: 150px;
     background-color: #B65FCF;
@@ -41,4 +42,17 @@
     font-size: 16px;
     font-weight: 550;
     cursor: pointer;
+}
+
+.sign__up {
+    height: 45px;
+    width: 150px; 
+    font-size: 20px;
+    font-weight: 550;
+    background-color: white;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 10px;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../solomon.png';
+import { Link } from "react-router-dom";
 import '../Styles/Header.css';
 
 const Header = () => {
@@ -13,13 +14,14 @@ const Header = () => {
             <div>
                 <nav className='nav__links'>
                     <ul style={{color:'white', fontSize:'20px'}}>Home</ul>
-                    <ul style={{color:'white', fontSize:'20px'}}>Artists & Creators</ul>
+                    <ul style={{color:'white', fontSize:'20px'}}>Creators</ul>
                     <ul style={{color:'white', fontSize:'20px'}}>Your Profile</ul>
                 </nav>
             </div>
 
             <div>
                 <button className='connect__wallet'>Connect Wallet</button>
+                <Link to="/signup" style={{textDecoration:'none', outline:'none',}}><button className='sign__up'>Sign Up</button></Link>
             </div>
 
         </div>

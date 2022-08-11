@@ -1,0 +1,9 @@
+.signup_page {
+    margin-top: 20px;
+}
+
+.signup__logo {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+}
