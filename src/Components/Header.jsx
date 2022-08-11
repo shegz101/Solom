@@ -20,7 +20,7 @@ const Header = () => {
             </div>
 
             <div>
-                <button className='connect__wallet'>Connect Wallet</button>
+                {/* <button className='connect__wallet'>Connect Wallet</button> */}
                 <Link to="/signup" style={{textDecoration:'none', outline:'none',}}><button className='sign__up'>Sign Up</button></Link>
             </div>
 
