@@ -20,7 +20,7 @@ const Collection = () => {
                     <p>Upload your cover art</p>
                 </div>
                 <div>
-                    <p style={{textAlign:'left'}}>Title</p>
+                    <p>Title<span style={{color:'red'}}>*</span></p>
                     <input type='text' placeholder='Fill your collection tItle'/>
                     <p>Categories</p>
                 </div>
