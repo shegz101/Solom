@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from './Header';
 import nft from '../solnftbg.png';
+import { Link } from "react-router-dom";
 import '../Styles/Landing.css';
-
 
 const Landing = () => {
     return (
@@ -20,7 +20,7 @@ const Landing = () => {
 
             <div className='grp__btn'>
                 <button className='explore__btn'>Explore</button>
-                <button className='collection__btn'>Create Collection</button>
+                <Link to="/collection" style={{textDecoration:'none', outline:'none',}}><button className='collection__btn'>Create Collection</button></Link>
             </div>
         </div>
     )
