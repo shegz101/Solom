@@ -13,7 +13,7 @@ const Header = () => {
 
             <div>
                 <nav className='nav__links'>
-                    <ul style={{color:'white', fontSize:'20px'}}>Home</ul>
+                    <ul style={{color:'white', fontSize:'20px'}}>Marketplace</ul>
                     <ul style={{color:'white', fontSize:'20px'}}>Creators</ul>
                     <ul style={{color:'white', fontSize:'20px'}}>Your Profile</ul>
                 </nav>
@@ -21,7 +21,7 @@ const Header = () => {
 
             <div>
                 {/* <button className='connect__wallet'>Connect Wallet</button> */}
-                <Link to="/signup" style={{textDecoration:'none', outline:'none',}}><button className='sign__up'>Sign Up</button></Link>
+                <Link to="/signup" style={{textDecoration:'none', outline:'none',}}><button className='sign__up'>Start Creating</button></Link>
             </div>
 
         </div>

@@ -46,13 +46,14 @@
 .sign__up {
     margin-top: 10px;
     height: 45px;
-    width: 150px; 
+    width: 180px; 
     font-size: 20px;
     font-weight: 550;
-    background-color: white;
+    color:white;
+    background-color: #B65FCF;
     text-decoration: none;
     outline: none;
     cursor: pointer;
-    border: 1px solid transparent;
+    border: 1px solid white;
     border-radius: 10px;
 }
