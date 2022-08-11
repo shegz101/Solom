@@ -1,10 +1,18 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import '../Styles/Signup.css';
 import logo from '../solomon.png';
 import { Link } from "react-router-dom";
 import {FiUpload } from 'react-icons/fi';
 
-const Signup = () => {
+const Signup = (props) => {
+    const hiddenFileInput = useRef(null);
+    const handleClick = event => {
+        hiddenFileInput.current.click();
+    };
+    const handleChange = event => {
+        const fileUploaded = event.target.files[0];
+        props.handleFile(fileUploaded);
+    };
     return (
         <div className='signup_page'>
             <div className='signup__logo'>
@@ -17,9 +25,10 @@ const Signup = () => {
                 <h1 className='sign-text'>Sign Up as an Artist/Creator</h1>
                 <p className='sign-descp'>Already an artist? <span style={{color:'#3e00b3',}}>Create a collection</span></p>
                 <div className='sign__div'>
-                    <div className='img__upload'>
+                    <div className='img__upload' onClick={handleClick} onChange={handleChange}>
                         <div ><FiUpload style={{paddingTop:'30px'}} className='file__uploader'/></div>
                         <div ><p style={{paddingBottom:'20px', fontSize:'15px'}}>Upload</p></div>
+                        <input type="file" ref={hiddenFileInput} style={{display:'none'}} />
                     </div>
                     <p>Set a Profile photo</p>
                     <input type='text'  className='input__user' placeholder='Enter a username'/>
