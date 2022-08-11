@@ -3,6 +3,7 @@ import Header from './Header';
 import nft from '../solnftbg.png';
 import '../Styles/Landing.css';
 
+
 const Landing = () => {
     return (
         <div className='landing__section'>

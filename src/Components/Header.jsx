@@ -2,8 +2,14 @@ import React from 'react';
 import logo from '../solomon.png';
 import { Link } from "react-router-dom";
 import '../Styles/Header.css';
+// import { useWalletModal } from '@solana/wallet-adapter-react-ui';
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
+import { useConnection, useWallet } from '@solana/wallet-adapter-react';
 
 const Header = () => {
+    // const { connection } = useConnection();
+    // const { publicKey, sendTransaction } = useWallet();
+    // const { setVisible } = useWalletModal();
     return (
         <div className="header__section">
             <div className='header__logo'>
@@ -19,11 +25,11 @@ const Header = () => {
                 </nav>
             </div>
 
-            <div>
-                {/* <button className='connect__wallet'>Connect Wallet</button> */}
+            <div className='group__btn'>
+                <WalletMultiButton />
+                {/* <button className='connect__wallet' onClick={() => setVisible(true)}>Connect Wallet</button> */}
                 <Link to="/signup" style={{textDecoration:'none', outline:'none',}}><button className='sign__up'>Start Creating</button></Link>
             </div>
-
         </div>
     )
 }
