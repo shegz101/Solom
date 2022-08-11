@@ -1,9 +1,73 @@
 .signup_page {
-    margin-top: 20px;
+    margin-top: 15px;
+    height: 100vh;
+    overflow-y: hidden;
 }
 
 .signup__logo {
     display: flex;
     flex-direction: row;
     margin-left: 30px;
+}
+
+.signup__main {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-text {
+    color: black;
+    margin-top: -5px;
+}
+
+.sign-descp {
+    margin-top: -10px;
+}
+
+.img__upload {
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+    /* behavior: url(PIE.htc); */
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    /* margin-bottom: -15px; */
+}
+
+.input__user {
+    width: 382px;
+    height: 40px;
+    text-decoration: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+
+.description-field {
+    margin-top: 15px;
+    text-decoration: none;
+    outline: none;
+    border-radius: 5px;
+    resize: none;
+}
+
+.create__btn {
+    height: 40px;
+    width: 385px;
+    color:white;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #3e00b3;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 25px;
+    outline: none;
+    border: 1px solid transparent;
 }
