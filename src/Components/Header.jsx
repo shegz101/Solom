@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import '../Styles/Header.css';
 // import { useWalletModal } from '@solana/wallet-adapter-react-ui';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
-import { useConnection, useWallet } from '@solana/wallet-adapter-react';
+// import { useConnection, useWallet } from '@solana/wallet-adapter-react';
 
 const Header = () => {
     // const { connection } = useConnection();
