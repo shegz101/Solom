@@ -20,9 +20,9 @@ const Collection = () => {
                     <p>Upload your cover art</p>
                 </div>
                 <div>
-                    <p>Title<span style={{color:'red'}}>*</span></p>
+                    <p style={{textAlign:'left', paddingLeft:'20px'}}>Title<span style={{color:'red'}}>*</span></p>
                     <input type='text' placeholder='Fill your collection tItle'/>
-                    <p>Categories</p>
+                    <p style={{textAlign:'left', paddingLeft:'20px'}}>Categories</p>
                 </div>
             </div>
         </div>
