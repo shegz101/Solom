@@ -1,7 +1,6 @@
 import React, {useRef, useState} from 'react';
 import '../Styles/Collection.css';
-import logo from '../solomon.png';
-import { Link } from "react-router-dom";
+import Header from './Header';
 import { BsCardImage } from 'react-icons/bs';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 
@@ -25,11 +24,7 @@ const Collection = (props) => {
     }
     return (
         <div className='collection__page'>
-            <div className='collection__logo'>
-                <span><img src={logo} style={{fontSize:'20px',height:'45px',marginTop:'25px',borderRadius:'15px',}} alt="solomon-logo"/></span>
-                <Link to="/" style={{textDecoration:'none', outline:'none',}}><h1 style={{color:'white',paddingLeft:'10px', paddingTop:'8px', cursor:'pointer',}} className='header-text'>Solomon</h1></Link>
-            </div>
-
+            <Header/>
             <div className='collection__creation__section'>
                 <h2 style={{color:'white',}}>Create new item</h2>
                 <p style={{color:'white',}}>File type supported: JPG, PNG. Max Size:5 MB</p>

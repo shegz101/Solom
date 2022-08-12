@@ -14,20 +14,19 @@ const Header = () => {
         <div className="header__section">
             <div className='header__logo'>
                 <span><img src={logo} style={{fontSize:'20px',height:'45px',marginTop:'25px',borderRadius:'15px',}} alt="solomon-logo"/></span>
-                <h1 style={{color:'white',paddingLeft:'10px', paddingTop:'8px', cursor:'pointer',}} className='header-text'>Solomon</h1>
+                <Link to="/" style={{textDecoration:'none', outline:'none',}}><h1 style={{color:'white',paddingLeft:'10px', paddingTop:'8px', cursor:'pointer',}} className='header-text'>Solomon</h1></Link>
             </div>
 
             <div>
                 <nav className='nav__links'>
                     <ul style={{color:'white', fontSize:'20px'}}>Marketplace</ul>
                     <ul style={{color:'white', fontSize:'20px'}}>Creators</ul>
-                    <ul style={{color:'white', fontSize:'20px'}}>Your Profile</ul>
+                    <Link to="/profile" style={{textDecoration:'none', outline:'none',}}><ul style={{color:'white', fontSize:'20px'}}>Your Profile</ul></Link>
                 </nav>
             </div>
 
             <div className='group__btn'>
                 <WalletMultiButton />
-                {/* <button className='connect__wallet' onClick={() => setVisible(true)}>Connect Wallet</button> */}
                 <Link to="/signup" style={{textDecoration:'none', outline:'none',}}><button className='sign__up'>Start Creating</button></Link>
             </div>
         </div>

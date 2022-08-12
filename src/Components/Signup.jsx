@@ -1,5 +1,6 @@
 import React, {useRef} from 'react';
 import '../Styles/Signup.css';
+import Header from './Header';
 import logo from '../solomon.png';
 import { Link } from "react-router-dom";
 import {FiUpload } from 'react-icons/fi';
@@ -15,11 +16,7 @@ const Signup = (props) => {
     };
     return (
         <div className='signup_page'>
-            <div className='signup__logo'>
-                <span><img src={logo} style={{fontSize:'20px',height:'45px',marginTop:'25px',borderRadius:'15px',}} alt="solomon-logo"/></span>
-                <Link to="/" style={{textDecoration:'none', outline:'none',}}><h1 style={{color:'white',paddingLeft:'10px', paddingTop:'8px', cursor:'pointer',}} className='header-text'>Solomon</h1></Link>
-            </div>
-
+            <Header/>
             <div className='signup__main'>
                 <span><img src={logo} style={{fontSize:'20px',height:'45px',marginTop:'25px',borderRadius:'15px',}} alt="solomon-logo"/></span>
                 <h1 className='sign-text'>Sign Up as an Artist/Creator</h1>
