@@ -30,6 +30,9 @@ const Profile = () => {
 
            <div clasName='activities__space'>
               {
+                
+              }
+              {
                 item && (
                     <p style={{color:'white',}}>You have no items yet</p>
                 )

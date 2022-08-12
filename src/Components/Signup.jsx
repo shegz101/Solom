@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import '../Styles/Signup.css';
 import Header from './Header';
 import logo from '../solomon.png';
@@ -7,13 +7,16 @@ import {FiUpload } from 'react-icons/fi';
 
 const Signup = (props) => {
     const hiddenFileInput = useRef(null);
+    const [file, setFile] = useState();
+    const [profile, setProfile] = useState(true);
     const handleClick = event => {
         hiddenFileInput.current.click();
     };
-    const handleChange = event => {
-        const fileUploaded = event.target.files[0];
-        props.handleFile(fileUploaded);
-    };
+    const handleChange = (e) => {
+        console.log(e.target.files);
+        setFile(URL.createObjectURL(e.target.files[0]));
+        setProfile(false);
+    }
     return (
         <div className='signup_page'>
             <Header/>
@@ -22,10 +25,18 @@ const Signup = (props) => {
                 <h1 className='sign-text'>Sign Up as an Artist/Creator</h1>
                 <p className='sign-descp'>Already an artist? <Link to="/collection" style={{textDecoration:'none', outline:'none',}}><span style={{color:'#3e00b3',}}>Create a collection</span></Link></p>
                 <div className='sign__div'>
-                    <div className='img__upload' onClick={handleClick} onChange={handleChange}>
-                        <FiUpload style={{position:'absolute', paddingBottom:'15px'}} className='file__uploader'/>
-                        <p style={{paddingTop:'13px'}}>Upload</p>
-                        <input type="file" ref={hiddenFileInput} style={{display:'none'}} />
+                    <div className='img__upload' onClick={handleClick}>
+                        {
+                            profile ? (
+                                <>
+                                  <FiUpload style={{position:'absolute', paddingBottom:'15px'}} className='file__uploader'/>
+                                  <p style={{paddingTop:'13px'}}>Upload</p>
+                                  <input type="file" ref={hiddenFileInput} onChange={handleChange} style={{display:'none'}} />
+                                </>
+                            ) : (
+                                <><img className='preview__img' src={file} alt='preview'/></>
+                            )
+                        }
                     </div>
                     <p style={{color:'white'}}>Set a Profile photo</p>
                     <input type='text'  className='input__user' placeholder='Enter a username'/>

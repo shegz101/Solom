@@ -56,7 +56,15 @@ input[type=text]:focus {
     align-items: center;
     justify-content: center;
     margin-right: auto;
+    cursor:pointer;
     /* margin-bottom: -15px; */
+}
+
+.preview__img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .input__user {

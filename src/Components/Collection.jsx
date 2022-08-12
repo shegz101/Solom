@@ -8,12 +8,15 @@ const Collection = (props) => {
     const [categorymodal, setCategoryModal] = useState(false);
     const [categorytext, setCategoryText] = useState('Select Category');
     const hiddenFileInput = useRef(null);
+    const [file, setFile] = useState();
+    const [prev, setPrev] = useState(true);
+    const handleChange = (e) => {
+        console.log(e.target.files);
+        setFile(URL.createObjectURL(e.target.files[0]));
+        setPrev(false);
+    }
     const handleClick = event => {
         hiddenFileInput.current.click();
-    };
-    const handleChange = event => {
-        const fileUploaded = event.target.files[0];
-        props.handleFile(fileUploaded);
     };
     const openCategoryModal = () => {
         if (categorymodal === false) {
@@ -28,10 +31,18 @@ const Collection = (props) => {
             <div className='collection__creation__section'>
                 <h2 style={{color:'white',}}>Create new item</h2>
                 <p style={{color:'white',}}>File type supported: JPG, PNG. Max Size:5 MB</p>
-                <div className='img' onClick={handleClick} onChange={handleChange}>
-                    <span><BsCardImage style={{width:'80px', height:'80px', color:'white'}}/></span>
-                    <p>Upload your cover art</p>
-                    <input type="file" ref={hiddenFileInput} style={{display:'none'}} />
+                <div className='img' onClick={handleClick}>
+                    {
+                        prev ? (
+                            <>
+                              <span><BsCardImage style={{width:'80px', height:'80px', color:'white'}}/></span>
+                              <p>Upload your cover art</p>
+                              <input type="file" ref={hiddenFileInput} onChange={handleChange} style={{display:'none'}} />
+                            </>
+                        ) : (
+                            <><img src={file} alt='preview'/></>
+                        )
+                    }
                 </div>
                 <div>
                     <p style={{textAlign:'left', paddingLeft:'20px', color:'white',}}>Title<span style={{color:'red'}}>*</span></p>
@@ -45,13 +56,13 @@ const Collection = (props) => {
             {
                 categorymodal && (
                     <div className='category__modal'>
-                        <p style={{marginTop:'8px'}} onClick={() => setCategoryText('Writing')}>Writing</p>
-                        <p style={{marginTop:'-15px'}} onClick={() => setCategoryText('Video')}>Video</p>
-                        <p style={{marginTop:'-15px'}} onClick={() => setCategoryText('Music')}>Music</p>
-                        <p style={{marginTop:'-15px'}} onClick={() => setCategoryText('Painting')}>Painting</p>
-                        <p style={{marginTop:'-15px'}} onClick={() => setCategoryText('Design')}>Design</p>
-                        <p style={{marginTop:'-15px'}} onClick={() => setCategoryText('Photograph')}>Photograph</p>
-                        <p style={{marginTop:'-15px', marginBottom:'3px'}} onClick={() => setCategoryText('Adult')}>Adult</p>
+                        <p style={{marginTop:'8px'}}   onClick={() => [setCategoryText('Writing'), setCategoryModal(false)]}>Writing</p>
+                        <p style={{marginTop:'-15px'}} onClick={() => [setCategoryText('Video'), setCategoryModal(false)]}>Video</p>
+                        <p style={{marginTop:'-15px'}} onClick={() => [setCategoryText('Music'), setCategoryModal(false)]}>Music</p>
+                        <p style={{marginTop:'-15px'}} onClick={() => [setCategoryText('Painting'), setCategoryModal(false)]}>Painting</p>
+                        <p style={{marginTop:'-15px'}} onClick={() => [setCategoryText('Design'), setCategoryModal(false)]}>Design</p>
+                        <p style={{marginTop:'-15px'}} onClick={() => [setCategoryText('Photograph'), setCategoryModal(false)]}>Photograph</p>
+                        <p style={{marginTop:'-15px', marginBottom:'3px'}} onClick={() => [setCategoryText('Adult'), setCategoryModal(false)]}>Adult</p>
                     </div>
                 )
             }
