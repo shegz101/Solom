@@ -3,6 +3,7 @@ import '../Styles/Collection.css';
 import logo from '../solomon.png';
 import { Link } from "react-router-dom";
 import { BsCardImage } from 'react-icons/bs';
+import { RiArrowDropDownLine } from 'react-icons/ri';
 
 const Collection = (props) => {
     const hiddenFileInput = useRef(null);
@@ -32,6 +33,12 @@ const Collection = (props) => {
                     <p style={{textAlign:'left', paddingLeft:'20px', color:'white',}}>Title<span style={{color:'red'}}>*</span></p>
                     <input type='text' className='collect__title' placeholder='Fill your collection tItle'/>
                     <p style={{textAlign:'left', paddingLeft:'20px', color:'white',}}>Categories</p>
+                    <div>
+                        <p className='catergory__default'><span style={{paddingLeft:'10px', paddingTop:'3px', fontWeight:'600'}}>Select Category</span>  <span style={{paddingRight:'10px', paddingTop:'3px', fontWeight:'600', fontSize:'20px'}}><RiArrowDropDownLine/></span></p>
+                        <div>
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

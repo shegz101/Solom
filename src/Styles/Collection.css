@@ -58,3 +58,22 @@ input[type=text]:focus {
     -webkit-transition: 1s; /* Safari */
     transition: 1s;
 }
+
+.catergory__default {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: max-content;
+    width: 300px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 20px;
+    border-radius: 3px;
+    background-color: white;
+    border: solid 2px #D3D3D3;
+    color:black;
+    /* font-weight: 600; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-transition: 1s; /* Safari */
+    transition: 1s;
+}
