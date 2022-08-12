@@ -23,7 +23,7 @@ const Signup = (props) => {
             <div className='signup__main'>
                 <span><img src={logo} style={{fontSize:'20px',height:'45px',marginTop:'25px',borderRadius:'15px',}} alt="solomon-logo"/></span>
                 <h1 className='sign-text'>Sign Up as an Artist/Creator</h1>
-                <p className='sign-descp'>Already an artist? <span style={{color:'#3e00b3',}}>Create a collection</span></p>
+                <p className='sign-descp'>Already an artist? <Link to="/collection" style={{textDecoration:'none', outline:'none',}}><span style={{color:'#3e00b3',}}>Create a collection</span></Link></p>
                 <div className='sign__div'>
                     <div className='img__upload' onClick={handleClick} onChange={handleChange}>
                         <FiUpload style={{position:'absolute', paddingBottom:'15px'}} className='file__uploader'/>
