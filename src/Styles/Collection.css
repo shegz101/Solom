@@ -3,9 +3,9 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     /* overflow-y: scroll; */
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .collection__logo {
@@ -15,7 +15,7 @@
 }
 
 .collection__creation__section {
-    margin-top: 15px;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
@@ -64,7 +64,7 @@ input[type=text]:focus {
     flex-direction: row;
     justify-content: space-between;
     height: max-content;
-    width: 300px;
+    width: 305px;
     padding-top: 5px;
     padding-bottom: 5px;
     margin-left: 20px;
@@ -76,4 +76,31 @@ input[type=text]:focus {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     -webkit-transition: 1s; /* Safari */
     transition: 1s;
+}
+
+.category__modal {
+    /* padding-top: 3px;
+    padding-bottom: 3px; */
+    height: max-content;
+    width: 305px;
+    margin-top: -10px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10;
+    border-radius: 3px;
+    background-color: #fff;
+    border: solid 2px #D3D3D3;
+}
+
+.category__modal > p {
+    cursor: pointer;
+    /* padding-bottom: -3px; */
+    padding-left: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.24;
+}
+
+.category__modal > p:hover {
+    background-color: #D3D3D3;
 }
