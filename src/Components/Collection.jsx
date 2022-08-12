@@ -1,10 +1,18 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import '../Styles/Collection.css';
 import logo from '../solomon.png';
 import { Link } from "react-router-dom";
 import { BsCardImage } from 'react-icons/bs';
 
-const Collection = () => {
+const Collection = (props) => {
+    const hiddenFileInput = useRef(null);
+    const handleClick = event => {
+        hiddenFileInput.current.click();
+    };
+    const handleChange = event => {
+        const fileUploaded = event.target.files[0];
+        props.handleFile(fileUploaded);
+    };
     return (
         <div className='collection__page'>
             <div className='collection__logo'>
@@ -15,9 +23,10 @@ const Collection = () => {
             <div className='collection__creation__section'>
                 <h2 style={{color:'white',}}>Create new item</h2>
                 <p style={{color:'white',}}>File type supported: JPG, PNG. Max Size:5 MB</p>
-                <div className='img'>
+                <div className='img' onClick={handleClick} onChange={handleChange}>
                     <span><BsCardImage style={{width:'80px', height:'80px', color:'white'}}/></span>
                     <p>Upload your cover art</p>
+                    <input type="file" ref={hiddenFileInput} style={{display:'none'}} />
                 </div>
                 <div>
                     <p style={{textAlign:'left', paddingLeft:'20px', color:'white',}}>Title<span style={{color:'red'}}>*</span></p>
