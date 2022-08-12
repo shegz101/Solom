@@ -13,16 +13,16 @@ const Collection = () => {
             </div>
 
             <div className='collection__creation__section'>
-                <h2>Create new item</h2>
-                <p>File type supported: JPG, PNG. Max Size:5 MB</p>
+                <h2 style={{color:'white',}}>Create new item</h2>
+                <p style={{color:'white',}}>File type supported: JPG, PNG. Max Size:5 MB</p>
                 <div className='img'>
                     <span><BsCardImage style={{width:'80px', height:'80px', color:'white'}}/></span>
                     <p>Upload your cover art</p>
                 </div>
                 <div>
-                    <p style={{textAlign:'left', paddingLeft:'20px'}}>Title<span style={{color:'red'}}>*</span></p>
-                    <input type='text' placeholder='Fill your collection tItle'/>
-                    <p style={{textAlign:'left', paddingLeft:'20px'}}>Categories</p>
+                    <p style={{textAlign:'left', paddingLeft:'20px', color:'white',}}>Title<span style={{color:'red'}}>*</span></p>
+                    <input type='text' className='collect__title' placeholder='Fill your collection tItle'/>
+                    <p style={{textAlign:'left', paddingLeft:'20px', color:'white',}}>Categories</p>
                 </div>
             </div>
         </div>

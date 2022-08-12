@@ -26,11 +26,11 @@ const Signup = (props) => {
                 <p className='sign-descp'>Already an artist? <span style={{color:'#3e00b3',}}>Create a collection</span></p>
                 <div className='sign__div'>
                     <div className='img__upload' onClick={handleClick} onChange={handleChange}>
-                        <div ><FiUpload style={{paddingTop:'30px'}} className='file__uploader'/></div>
-                        <div ><p style={{paddingBottom:'20px', fontSize:'15px'}}>Upload</p></div>
+                        <FiUpload style={{position:'absolute', paddingBottom:'15px'}} className='file__uploader'/>
+                        <p style={{paddingTop:'13px'}}>Upload</p>
                         <input type="file" ref={hiddenFileInput} style={{display:'none'}} />
                     </div>
-                    <p>Set a Profile photo</p>
+                    <p style={{color:'white'}}>Set a Profile photo</p>
                     <input type='text'  className='input__user' placeholder='Enter a username'/>
                     <form class="my-form">
                        <textarea className="description-field"  name="msg" rows="5" cols="50" placeholder="Tell us a little about yourself"></textarea>
