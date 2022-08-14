@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../solomon.png';
+import logo from '../Assets/solomon.png';
 import { Link } from "react-router-dom";
 import '../Styles/Header.css';
 // import { useWalletModal } from '@solana/wallet-adapter-react-ui';

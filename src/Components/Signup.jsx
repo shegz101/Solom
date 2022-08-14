@@ -1,7 +1,7 @@
 import React, {useRef, useState} from 'react';
 import '../Styles/Signup.css';
 import Header from './Header';
-import logo from '../solomon.png';
+import logo from '../Assets/solomon.png';
 import { Link } from "react-router-dom";
 import {FiUpload } from 'react-icons/fi';
 

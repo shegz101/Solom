@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import nft from '../solnftbg.png';
+import nft from '../Assets/solnftbg.png';
 import { Link } from "react-router-dom";
 import '../Styles/Landing.css';
 
