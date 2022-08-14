@@ -19,6 +19,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Signup from './Components/Signup';
 import Collection from './Components/Collection';
 import Profile from './Components/Profile';
+// import Items from './Components/Items';
+// import Mycollections from './Components/MycollectIons';
 
 // import the styles
 require('@solana/wallet-adapter-react-ui/styles.css');
@@ -52,6 +54,8 @@ function App() {
                  <Route path="/signup" element={<Signup/>}/>
                  <Route path="/collection" element={<Collection/>}/>
                  <Route path="/profile" element={<Profile/>}/>
+                 {/* <Route path="/items" element={<Items/>}/>
+                 <Route path="/mycollections" element={<Mycollections/>}/> */}
                </Routes>
               </div>
             </Router>

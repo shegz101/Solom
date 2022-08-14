@@ -30,13 +30,13 @@ const Collection = (props) => {
             <Header/>
             <div className='collection__creation__section'>
                 <h2 style={{color:'white',}}>Create new item</h2>
-                <p style={{color:'white',}}>File type supported: JPG, PNG. Max Size:5 MB</p>
+                <p style={{color:'white',}}>File type supported: JPG, PNG, MP3</p>
                 <div className='img' onClick={handleClick}>
                     {
                         prev ? (
                             <>
                               <span><BsCardImage style={{width:'80px', height:'80px', color:'white'}}/></span>
-                              <p>Upload your cover art</p>
+                              <p>Upload your file</p>
                               <input type="file" ref={hiddenFileInput} onChange={handleChange} style={{display:'none'}} />
                             </>
                         ) : (
@@ -50,6 +50,9 @@ const Collection = (props) => {
                     <p style={{textAlign:'left', paddingLeft:'20px', color:'white',}}>Categories</p>
                     <div onClick={openCategoryModal}>
                         <p className='catergory__default'><span style={{paddingLeft:'18px', paddingTop:'3px', fontWeight:'600'}}>{categorytext}</span>  <span style={{paddingRight:'10px', paddingTop:'3px', fontWeight:'600', fontSize:'20px'}}><RiArrowDropDownLine/></span></p>
+                    </div>
+                    <div className='add__btn__section'>
+                        <button className='add__btn__item'>Add Item</button>
                     </div>
                 </div>
             </div>
